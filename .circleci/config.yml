@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: debian:stretch
+      - image: circleci/node:9.11
     steps:
       - checkout
 
@@ -52,6 +52,9 @@ workflows:
     jobs:
       - build:
           context: kellenforthewin
+          filters:
+            branches:
+              only: dev
       - deploy-kellenforthewin:
           requires:
             - build
