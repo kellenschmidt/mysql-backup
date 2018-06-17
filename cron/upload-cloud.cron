@@ -1,0 +1,17 @@
+###############################
+#    Cloud Upload Cronjobs    #
+###############################
+
+# At every 2nd minute
+# */2 * * * * /home/bin/upload_cloud.sh >> /var/log/cron.log 2>&1
+
+# Daily at 8:59 GMT
+59 8 * * * /home/bin/upload_cloud.sh >> /var/log/cron.log 2>&1
+
+# Weekly on Sunday at 8:59 GMT
+# 59 8 * * 0 /home/bin/upload_cloud.sh >> /var/log/cron.log 2>&1
+
+# Monthly on 1st at 8:59 GMT
+# 59 8 1 * * /home/bin/upload_cloud.sh >> /var/log/cron.log 2>&1
+
+#

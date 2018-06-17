@@ -1,0 +1,20 @@
+#################################
+#    Remove Backups Cronjobs    #
+#################################
+
+# At every 2nd minute
+# */2 * * * * /home/bin/remove_backups.sh test >> /var/log/cron.log 2>&1
+
+# Hourly every 54th minute
+54 * * * * /home/bin/remove_backups.sh hourly >> /var/log/cron.log 2>&1
+
+# Daily at 8:54 GMT
+54 8 * * * /home/bin/remove_backups.sh daily >> /var/log/cron.log 2>&1
+
+# Weekly on Sunday at 8:54 GMT
+54 8 * * 0 /home/bin/remove_backups.sh weekly >> /var/log/cron.log 2>&1
+
+# Monthly on 1st at 8:54 GMT
+54 8 1 * * /home/bin/remove_backups.sh monthly >> /var/log/cron.log 2>&1
+
+#
