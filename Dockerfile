@@ -1,5 +1,5 @@
-# docker build -t kellenschmidt/kspw-mysql-cron .
-# docker run --env-file ./kspw-mysql-cron.env -d kellenschmidt/kspw-mysql-cron
+# docker build -t kellenschmidt/mysql-backup .
+# docker run --env-file ./mysql-backup.env -d kellenschmidt/mysql-backup
 
 FROM alpine:3.7
 
